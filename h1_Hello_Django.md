@@ -376,8 +376,56 @@ Laitetaan vielä nimet näkymään käyttöliittymässä:
         		return self.nimi  
 
 
+Nyt objekteilla on nimetkin:  
 
+![objekteillenimet](https://github.com/LiljestromNadja/Django_course/assets/118609353/4b29493e-aa34-4897-9dc8-1da480f32286)
+
+<!--
+#### Taulujen suhde (one to many)
+
+Päivitetään models.py -tiedostoon uusi luokka Harrastus:  
+
+	(env) nadja@debian:~/django/public_sites/kesadjango$ micro henkilot/models.py  
 	
+	->
+	from django.db import models
+
+	# Create your models here.
+	class Harrastus(models.Model):
+		lajinnimi = models.CharField(max_length=250)
+
+
+	class Henkilo(models.Model):  
+		nimi = models.CharField(max_length=250)
+		kaupunki = models.CharField(max_length=250)
+		lempinimi = models.CharField(max_length=250)
+		laji = models.ForeignKey(Harrastus, on_delete=models.CASCADE)
+
+
+		def __str__(self):
+			return self.nimi
+			
+			
+... sekä admin.py -tiedostoon:  
+
+	(env) nadja@debian:~/django/public_sites/kesadjango$ micro henkilot/admin.py  
+	
+	->  
+	from django.contrib import admin
+
+	# Register your models here.
+
+
+	from django.contrib import admin  
+	from . import models  
+
+	admin.site.register(models.Harrastus)
+	admin.site.register(models.Henkilo)  
+	
+	
+-->
+
+
 
 
 
