@@ -41,6 +41,8 @@
     
 #### Lähteet ja materiaalit:  
 
+[Tero Karvinen - Python Web - Idea to Production - 2023](https://terokarvinen.com/2023/python-web-idea-to-production/)
+
 
 
 
