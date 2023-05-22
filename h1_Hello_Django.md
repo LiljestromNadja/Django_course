@@ -137,10 +137,147 @@ Asensin myös "tree":n, jonka avulla saa selkeämmän näkymän tiedostojen kans
     
  ![tree](https://github.com/LiljestromNadja/Django_course/assets/118609353/6e41d959-9a7e-40e4-bcef-237e8c499031)
 
+---
 
 ### a) Asenna Django-kehitysympäristö (ja testaa, että etusivu näkyy)  
 
-### b) Vapaaehtoinen: Tee yksinkertainen taulu tietokantaan (models.py)  
+#### Kehitysympäristön asennus ja käyttöönotto  
+
+Pip-paketit voivat sisältää mitä vain mm. haittaohjelmia, eli kannattaa olla tietoinen mitä pakettia on lataamassa ja sen lisäksi olla tarkkana että kirjoittaa paketin nimen oikein.  
+
+Päivitykset:  
+
+		nadja@debian:~$ sudo apt-get update
+		
+		nadja@debian:~$ ls
+		
+Luodaan django -kansio ja asennetaan virtual environment:  
+		
+		nadja@debian:~$ mkdir django
+		nadja@debian:~$ cd django/
+		
+		nadja@debian:~/django$ sudo apt-get -y install virtualenv
+		
+		nadja@debian:~/django$ virtualenv --system-site-packages -p python3 env/  
+
+
+Aktivoidaan kehitysympäristö:  
+	
+	nadja@debian:~/django$ source env/bin/activate
+	
+Testataan:  
+
+	(env) nadja@debian:~/django$ which pip
+	
+	-> /home/nadja/django/env/bin/pip  
+	
+Asennetaan micro:  
+
+	nadja@debian:~/django$ sudo apt-get install micro
+
+Kehitysympäristön deaktivointi:  
+
+	(env) nadja@debian:~/django$ deactivate  
+	
+	
+Luodaan requirements.txt, johon kirjoitetaan "django":  
+
+	(env) nadja@debian:~/django$ micro requirements.txt
+	
+	-> django
+	
+	CTRL + S
+	CTRL + Q  
+	
+Asennetaan Django:  
+
+	(env) nadja@debian:~/django$ pip install -r requirements.txt  
+	
+Katsotaan Djangon versio:  
+
+	(env) nadja@debian:~/django$ django-admin --version
+	-> 4.2.1
+	
+Luodaan django -kansioon (jossa on env ja requirements.txt) kansio public_sites: 
+
+	(env) nadja@debian:~/django$ mkdir public_sites
+	
+Siirrytään public_sites -kansioon ja luodaan sinne projekti (sivusto):  
+
+	(env) nadja@debian:~/django$ cd public_sites/
+	
+	(env) nadja@debian:~/django/public_sites$ django-admin startproject kesadjango  
+	
+Mennään yksi kansio ylöspäin:  
+
+	(env) nadja@debian:~/django/public_sites$ cd ..
+	
+	(env) nadja@debian:~/django$ tree public_sites/  
+	
+![treepublicsites](https://github.com/LiljestromNadja/Django_course/assets/118609353/a96f9f75-4236-4d67-af86-f321e6b03fe0)
+
+
+Testataan käynnistämällä kehityspalvelin(toimitaan tasolla missä on manage.py-tiestosto). Tämä on "päätaso", josta manage.py -tiedosto löytyy. Kaikki Djangon komennot komentoriviltä annetaan './manage.py':llä:    
+
+	(env) nadja@debian:~/django/public_sites/kesadjango$ ./manage.py runserver  
+	
+![managepyrunserver1](https://github.com/LiljestromNadja/Django_course/assets/118609353/04786962-4441-43eb-8e39-6269caa67a34)
+
+Selaimessa:  
+
+![djangoonnistui](https://github.com/LiljestromNadja/Django_course/assets/118609353/d040ae01-9a71-4bfb-8d42-dba43cb4c40b)
+
+Serverin sulkeminen:  
+
+	CTRL + C  
+	
+
+
+
+---
+
+### b) Vapaaehtoinen: Tee yksinkertainen taulu tietokantaan (models.py) 
+
+Avataan uusi terminaali-ikkuna, mennään kansioon django ja aktivoidaan kehitysympäristö:  
+
+	nadja@debian:~/django$ source env/bin/activate
+
+	
+Jonka jälkeen projektikansioon, missä on manage.py -tiedosto ja otetaan tietokanta käyttöön. Nämä komennot tulee muistaa aina kun tietokantaan tehdään muutoksia:  
+	
+	(env) nadja@debian:~/django/public_sites/kesadjango$ ./manage.py makemigrations  
+	
+	(env) nadja@debian:~/django/public_sites/kesadjango$ ./manage.py migrate  
+	
+
+![migrate](https://github.com/LiljestromNadja/Django_course/assets/118609353/f9bf6bf3-bfa8-4e2c-b40c-61d40568e7b7)
+	
+	
+Seuraavaksi luodaan admin-käyttäjä:  
+
+	(env) nadja@debian:~/django/public_sites/kesadjango$ ./manage.py createsuperuser
+![superuser](https://github.com/LiljestromNadja/Django_course/assets/118609353/cabb3078-3cef-4d89-9347-4b8159d77656)
+
+Kokeillaan kirjautua selaimella äsken luodulla admin-käyttäjällä "nadja" (http://127.0.0.1:8000/admin):  
+
+![adminkirjautuminen](https://github.com/LiljestromNadja/Django_course/assets/118609353/69cc99bf-babc-4071-bf4b-716ea75932a2)
+
+
+Lisätään käyttäjä "Kayttaja1":  
+
+![lisaakayttaja](https://github.com/LiljestromNadja/Django_course/assets/118609353/9c827cd4-2206-4745-8c68-0f39d9b606f2)
+
+
+
+
+	
+
+
+	
+
+	
+
+	
 
 
 
