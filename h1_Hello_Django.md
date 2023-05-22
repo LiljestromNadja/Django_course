@@ -330,6 +330,53 @@ Täytyy myös luoda luokka 'Henkilo', jonka avulla määritellään tietokantaan
 	
 ![luokkaHenkilo](https://github.com/LiljestromNadja/Django_course/assets/118609353/1054beb3-1c6c-43f0-af9a-91614d5b4fcd)
 
+Päivitetään muutokset:  
+
+	(env) nadja@debian:~/django/public_sites/kesadjango$ ./manage.py makemigrations  
+		
+	(env) nadja@debian:~/django/public_sites/kesadjango$ ./manage.py migrate  
+	
+
+![paivitetty](https://github.com/LiljestromNadja/Django_course/assets/118609353/60885a90-1dcc-4df8-8e33-0a396c8e0d9e)
+
+
+Seuraavaksi muokataan tiedostoa admin.py:  
+
+	(env) nadja@debian:~/django/public_sites/kesadjango$ micro henkilot/admin.py  
+
+
+	->
+	from django.contrib import admin  
+	from . import models  
+
+	admin.site.register(models.Henkilo)  
+	
+	
+	
+Kokeillaan luoda selaimessa muutama henkilö:  
+
+![luohenkilo](https://github.com/LiljestromNadja/Django_course/assets/118609353/9ad15000-2cd4-41b1-9038-ec831042fe36)
+
+
+Laitetaan vielä nimet näkymään käyttöliittymässä:  
+
+	(env) nadja@debian:~/django/public_sites/kesadjango$ micro henkilot/models.py  	
+	
+	->
+	from django.db import models
+
+	# Create your models here.
+
+	class Henkilo(models.Model):  
+    		nimi = models.CharField(max_length=250)
+     		kaupunki = models.CharField(max_length=250)
+     		lempinimi = models.CharField(max_length=250)
+
+    	def __str__(self): #tämä lisätään  
+        		return self.nimi  
+
+
+
 	
 
 
