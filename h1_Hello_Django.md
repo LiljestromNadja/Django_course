@@ -265,7 +265,69 @@ Kokeillaan kirjautua selaimella äsken luodulla admin-käyttäjällä "nadja" (h
 
 Lisätään käyttäjä "Kayttaja1":  
 
-![lisaakayttaja](https://github.com/LiljestromNadja/Django_course/assets/118609353/9c827cd4-2206-4745-8c68-0f39d9b606f2)
+![lisaakayttaja](https://github.com/LiljestromNadja/Django_course/assets/118609353/9c827cd4-2206-4745-8c68-0f39d9b606f2)  
+
+
+**Tietokanta** 
+
+Sitten itse tietokannan pariin, ollaan yhä samalla "tasolla", missä manage.py. Luodaan "app":
+
+	(env) nadja@debian:~/django/public_sites/kesadjango$ ./manage.py startapp henkilot
+	
+	
+![apphenkilot](https://github.com/LiljestromNadja/Django_course/assets/118609353/85a4960c-2d0f-403c-af41-6f01ad9def8e)
+
+
+	(env) nadja@debian:~/django/public_sites/kesadjango$ ls henkilot/
+
+![lshenkilot](https://github.com/LiljestromNadja/Django_course/assets/118609353/3899c369-1d07-40dc-a6e2-8f71ce330322)
+
+
+App pitää myös lisätä 'settings.py' -tiedostoon.  
+
+	(env) nadja@debian:~/django/public_sites/kesadjango$ micro kesadjango/settings.py  
+	
+![settingspy](https://github.com/LiljestromNadja/Django_course/assets/118609353/b9906f01-d8f3-43bd-b387-b077ecae201e)
+
+
+	
+	INSTALLED_APPS = [
+		'django.contrib.admin',   
+    		'django.contrib.auth',  
+    		'django.contrib.contenttypes',  
+    		'django.contrib.sessions',  
+    		'django.contrib.messages',      
+		'django.contrib.staticfiles',  
+    		'henkilot', #lisää app tänne  
+	]
+
+
+![installedapps](https://github.com/LiljestromNadja/Django_course/assets/118609353/9facdda3-a4f8-44a1-a486-5a21f00c0997)
+
+
+Täytyy myös luoda luokka 'Henkilo', jonka avulla määritellään tietokantaan menevät tiedot(mm. attribuutin nimi, tietotyyppi):  
+
+	(env) nadja@debbiedebian:~/django/nlilj$ ls
+
+	(env) nadja@debbiedebian:~/django/nlilj$ micro henkilot/models.py  
+
+![luomodels](https://github.com/LiljestromNadja/Django_course/assets/118609353/e2893ddf-1e40-4fa6-bcb3-e3bfe0bc331d)
+
+
+	from django.db import models
+
+	# Create your models here.
+
+	class Henkilo(models.Model):  
+     		nimi = models.CharField(max_length=250)
+     		kaupunki = models.CharField(max_length=250)
+     		lempinimi = models.CharField(max_length=250)
+
+
+	
+![luokkaHenkilo](https://github.com/LiljestromNadja/Django_course/assets/118609353/1054beb3-1c6c-43f0-af9a-91614d5b4fcd)
+
+	
 
 
 
@@ -279,7 +341,7 @@ Lisätään käyttäjä "Kayttaja1":
 
 	
 
-
+---
 
 
 ### c) Vapaaehtoinen: Muokkaa tietokantaa Django Admin -weppiliittymällä  
