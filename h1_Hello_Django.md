@@ -236,7 +236,10 @@ Serverin sulkeminen:
 
 ---
 
-### b) Vapaaehtoinen: Tee yksinkertainen taulu tietokantaan (models.py) 
+### b) Vapaaehtoinen: Tee yksinkertainen taulu tietokantaan (models.py)   
+### c) Vapaaehtoinen: Muokkaa tietokantaa Django Admin -weppiliittymällä  
+### d) Vapaaehtoinen: Tee tauluun (luokkaan) uusia kenttiä  
+### e) Vapaaehtoinen, vaikea: tee kaksi taulua/luokkaa ja niiden välille riippuvuus 
 
 Avataan uusi terminaali-ikkuna, mennään kansioon django ja aktivoidaan kehitysympäristö:  
 
@@ -296,7 +299,7 @@ App pitää myös lisätä 'settings.py' -tiedostoon.
     		'django.contrib.auth',  
     		'django.contrib.contenttypes',  
     		'django.contrib.sessions',  
-    		'django.contrib.messages',      
+    		'django.contrib.messages',  
 		'django.contrib.staticfiles',  
     		'henkilot', #lisää app tänne  
 	]
@@ -344,11 +347,7 @@ Täytyy myös luoda luokka 'Henkilo', jonka avulla määritellään tietokantaan
 ---
 
 
-### c) Vapaaehtoinen: Muokkaa tietokantaa Django Admin -weppiliittymällä  
 
-### d) Vapaaehtoinen: Tee tauluun (luokkaan) uusia kenttiä  
-
-### e) Vapaaehtoinen, vaikea: tee kaksi taulua/luokkaa ja niiden välille riippuvuus 
 
 
 
