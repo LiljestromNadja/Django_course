@@ -239,7 +239,8 @@ Serverin sulkeminen:
 ### b) Vapaaehtoinen: Tee yksinkertainen taulu tietokantaan (models.py)   
 ### c) Vapaaehtoinen: Muokkaa tietokantaa Django Admin -weppiliittymällä  
 ### d) Vapaaehtoinen: Tee tauluun (luokkaan) uusia kenttiä  
-### e) Vapaaehtoinen, vaikea: tee kaksi taulua/luokkaa ja niiden välille riippuvuus 
+### e) Vapaaehtoinen, vaikea: tee kaksi taulua/luokkaa ja niiden välille riippuvuus  
+<br>
 
 Avataan uusi terminaali-ikkuna, mennään kansioon django ja aktivoidaan kehitysympäristö:  
 
