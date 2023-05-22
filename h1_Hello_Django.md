@@ -14,6 +14,7 @@ d) Vapaaehtoinen: Tee tauluun (luokkaan) uusia kenttiä
 e) Vapaaehtoinen, vaikea: tee kaksi taulua/luokkaa ja niiden välille riippuvuus  
 Kuten aina, palauta Laksuun klo 23 mennessä ja arvioi kaksi.  
 
+---
 
 ### Ennen Djangoa
 Koneellani oli jo valmiiksi debian-live-11.6.0-amd64-xfce+nonfree.iso -tiedosto (edellisen [Linux-kurssin](https://github.com/LiljestromNadja/DebianLinux/blob/main/h1_InstallingDebian.md) jäljiltä). 
