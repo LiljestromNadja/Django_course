@@ -453,5 +453,5 @@ Päivitetään models.py -tiedostoon uusi luokka Harrastus:
     
 #### Lähteet ja materiaalit:  
 
-[Tero Karvinen - Python Web - Idea to Production - 2023](https://terokarvinen.com/2023/python-web-idea-to-production/)
+[Tero Karvinen - Python Web - Idea to Production - 2023](https://terokarvinen.com/2023/python-web-idea-to-production/)  
 [Karvinen 2022: Django 4 Instant Customer Database Tutorial](https://terokarvinen.com/2022/django-instant-crm-tutorial/)  
