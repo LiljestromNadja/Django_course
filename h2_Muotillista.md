@@ -96,15 +96,16 @@ Päivitetään kesädjango/urls.py -listausta:
 
     urlpatterns = [
     path('admin/', admin.site.urls), 
-    path('',include('todo.urls')), 
-    path('', include('people.urls')),
+    path('todo/', include('todo.urls')),
+    path('people/',  include('people.urls')), 
    
     ]
     
     
 Jolloin saadaan viesti:  
 
-    ModuleNotFoundError: No module named 'people.urls' 
+    ModuleNotFoundError: No module named 'people.urls'  
+    
     
 Lisätään people-appiin tiedosto urls.py:  
 
@@ -131,6 +132,33 @@ Päivitetään tiedosto people/views.py
     class ContactListView(TemplateView):
         template_name = 'people/contacts.html'
 
+
+Kokeillaan ja saadaan viesti:  
+
+    Exception Type: 	TemplateDoesNotExist
+    Exception Value: 	people/contacts.html
+    
+    
+Täytynee siis luoda kaivattu tiedosto. Tehdään ensin templates-kansio, johon saadaan kaikki appsin templatet:  
+
+        
+        (env) nadja@debian:~/django/public_sites/kesadjango/people$ mkdir templates
+        (env) nadja@debian:~/django/public_sites/kesadjango/people/templates$ mkdir people
+        
+        (env) nadja@debian:~/django/public_sites/kesadjango/people/templates/people$ micro contacts.html
+        
+        
+        ->
+        kontaktit  
+        
+        
+
+![kontaktit](https://github.com/LiljestromNadja/Django_course/assets/118609353/8e6bcefe-57b0-428b-8495-5d7cf49dc536)
+
+
+ 
+
+    
 
 
 
