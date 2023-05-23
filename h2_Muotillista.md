@@ -28,7 +28,127 @@ Luodaan app people:
     (env) nadja@debian:~/django/public_sites/kesadjango$ ./manage.py startapp people
 
  
+![people](https://github.com/LiljestromNadja/Django_course/assets/118609353/5e447981-88c6-4f99-8f42-530a690ff6a8)
  
+Lisätään projektin kesadjango settings.py -tiedostoon äsken luotu app:  
+
+    (env) nadja@debian:~/django/public_sites/kesadjango$ micro kesadjango/settings.py 
+
+    INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',    
+    'todo', #add apps here
+    'people'    
+    ]
+
+Luodaan people-appiin luokka Contact:  
+
+    (env) nadja@debian:~/django/public_sites/kesadjango$ micro people/models.py  
+    
+    from django.db import models
+
+    class Contact(models.Model):
+        fullname = models.CharField(max_length=150)
+        nickname = models.CharField(unique = True, max_length=150)
+        email = models.CharField(max_length=150)
+        phone = models.CharField(max_length=100)
+        city = models.CharField(max_length=100)
+
+
+        def __str__(self):
+            return self.fullname  
+        
+        
+Lisätään luokka Contact people/admin.py -tiedostoon:  
+
+    (env) nadja@debian:~/django/public_sites/kesadjango/people$ micro admin.py 
+    
+    from django.contrib import admin
+    from .models import * 
+
+    admin.site.register(Contact)  
+  
+Testataan selaimessa lisätä ja saadaan error:  
+
+        Exception Type: 	OperationalError
+        Exception Value:    no such table: people_contact
+    
+Ilmoitus sanoo että kyseistä taulua ei ole. Päivitetään siis muutokset tietokantaan:  
+
+    (env) nadja@debian:~/django/public_sites/kesadjango$ ./manage.py makemigrations ; ./manage.py migrate
+            
+Testataan:  
+
+![lisaacontact](https://github.com/LiljestromNadja/Django_course/assets/118609353/7f4078f8-1ad5-4f62-9e11-0e85ac931815)  
+
+
+Päivitetään kesädjango/urls.py -listausta:  
+
+    (env) nadja@debian:~/django/public_sites/kesadjango$ micro kesadjango/urls.py  
+    
+    from django.contrib import admin
+    from django.urls import path, include 
+
+
+    urlpatterns = [
+    path('admin/', admin.site.urls), 
+    path('',include('todo.urls')), 
+    path('', include('people.urls')),
+   
+    ]
+    
+    
+Jolloin saadaan viesti:  
+
+    ModuleNotFoundError: No module named 'people.urls' 
+    
+Lisätään people-appiin tiedosto urls.py:  
+
+    (env) nadja@debian:~/django/public_sites/kesadjango$ micro people/urls.py  
+    
+    from django.urls import path
+    from .views import *
+
+    urlpatterns = [
+    path('', ContactListView.as_view()),
+   
+    ]  
+    
+    
+Jolloin saadaan viesti:  
+    
+    NameError: name 'ContactListView' is not defined  
+    
+
+Päivitetään tiedosto people/views.py
+    
+    from django.views.generic import TemplateView
+
+    class ContactListView(TemplateView):
+        template_name = 'people/contacts.html'
+
+
+
+
+
+
+
+
+
+   
+    
+
+    
+
+
+    
+ 
+    
+
 ---
 ### Tunnilla / päivä 2  
 
