@@ -18,7 +18,7 @@ Kuten aina, palauta Laksuun klo 23 mennessä ja arvioi kaksi.
 
 ### a) Tee Django-ohjelma, joka listaa kaikki tietueet etusivulla (ListView). Palauta lähdekoodi ja ruutukaappaus lopputuloksesta.
 
-[Projektin koodit](https://github.com/LiljestromNadja/djangoSummer)
+### [Projektin koodit](https://github.com/LiljestromNadja/djangoSummer)
 
 
 Luodaan app people:  
