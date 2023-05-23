@@ -272,7 +272,8 @@ Tiedoston kopioiminen toiseen kansioon:
     cp -n kansio/kopioitavaTiedosto kohdekansio  
     nadja@debian:~/django/public_sites/kesadjango$ cp -n kesadjango/urls.py todo    
 
-    
+---
+
 #### Projektin rakenne  
 
 Projekti(sivusto) on hyvä luoda public_sites -nimiseen kansioon, jolloin se on helposti kopioitavissa tuotantoon.  
@@ -289,7 +290,8 @@ Projekti(sivusto) on hyvä luoda public_sites -nimiseen kansioon, jolloin se on 
     
 ![projektinrakenne_ls](https://github.com/LiljestromNadja/Django_course/assets/118609353/a989b9fd-93e1-4a68-b064-0c7ebc5bda3c)
 
-    
+---
+
 #### URLit  
 
 Projektin(sivuston) urls.py -tiedostoon appsien urlit.  
@@ -304,7 +306,7 @@ huom! luo appsin templateille kansio:
  eli  
    
     nadja@debian:~/djangokansio/public_sites/projektin nimi/appsin nimi/templates/ appsin nimi$
-    
+---    
     
 #### Git
 
