@@ -1,4 +1,4 @@
-<!-- # Muotillista
+# Muotillista
 ## Tehtävänanto
 
 x) Silmäile: Karvinen 2023: Tero's Classy Django Cheatsheet  
@@ -13,7 +13,7 @@ d) Vapaaehtoinen: Tee käyttöliittymä tietueiden poistamiseen - ja varmista, h
 
 Kuten aina, palauta Laksuun klo 23 mennessä ja arvioi kaksi.  
 
--->
+
 ---
 
 ### a) Tee Django-ohjelma, joka listaa kaikki tietueet etusivulla (ListView). Palauta lähdekoodi ja ruutukaappaus lopputuloksesta.
@@ -21,7 +21,6 @@ Kuten aina, palauta Laksuun klo 23 mennessä ja arvioi kaksi.
 
 
 
-#### Uusi app  
 
 Luodaan app people:  
 
@@ -84,6 +83,7 @@ Ilmoitus sanoo että kyseistä taulua ei ole. Päivitetään siis muutokset tiet
 Testataan:  
 
 ![lisaacontact](https://github.com/LiljestromNadja/Django_course/assets/118609353/7f4078f8-1ad5-4f62-9e11-0e85ac931815)  
+
 
 
 Päivitetään kesädjango/urls.py -listausta:  
@@ -155,30 +155,111 @@ Täytynee siis luoda kaivattu tiedosto. Tehdään ensin templates-kansio, johon 
 
 ![kontaktit](https://github.com/LiljestromNadja/Django_course/assets/118609353/8e6bcefe-57b0-428b-8495-5d7cf49dc536)
 
+Luodaan templates/people/ base.html:  
 
+    (env) nadja@debian:~/django/public_sites/kesadjango/people/templates/people$ micro base.html
+    
+    <!doctype html>
+    <html lang=en>
+        <head>
+            <title>People</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width; initial-scale=1">
+        </head>
+        <body>
+            {% block "content" %}
+            <h1>This is base.html in People</h1>
+            {% endblock "content" %}
+        </body>
+    </html>
+    
+    
+Muokataan templates/people contacts.html -tiedostoa:  
+
+    (env) nadja@debian:~/django/public_sites/kesadjango/people/templates/people$ micro contacts.html 
+    
+    {% extends "people/base.html" %}  
+    
+    
+Testataan:  
+
+
+
+![extendsbase](https://github.com/LiljestromNadja/Django_course/assets/118609353/5efc8acb-d66b-4c2f-8fca-19672bdc42c2)  
+
+
+Tehdään listausta varten muutoksia tiedostoon people/views.py: 
+
+    (env) nadja@debian:~/django/public_sites/kesadjango/people$ micro views.py
+
+    from django.views.generic import TemplateView, ListView
+    
+    class ContactListView(ListView):
+    template_name = 'people/contacts.html'  
+    
+    
+...sekä templates/people/contacts.html -tiedostoon:  
+
+    {% extends "people/base.html" %}
+
+
+    {% block "content" %}
+        {% for object in  object_list %}
+            <p>	{{ object }} </p>
+        {% endfor %}
+    {% endblock "content" %}  
+    
+    
+Testataan localhost:8000/people/ ja saadaan virhe:   
+
+        
+    Exception Type: 	ImproperlyConfigured
+    Exception Value: 	ContactListView is missing a QuerySet. Define ContactListView.model, ContactListView.queryset, or override ContactListView.get_queryset().  
+    
+    
+Lisätään people/views.py -tiedostoon:  
+
+    (env) nadja@debian:~/django/public_sites/kesadjango/people$ micro views.py 
+    
+    from django.views.generic import TemplateView, ListView
+    from .models import *
+    
+    class ContactListView(ListView):
+    model = Contact
+    
+..jolloin virheilmoitus vaihtuu:  
+
+    Exception Type: 	TemplateDoesNotExist
+    Exception Value: 	people/contact_list.html
+    
+    
+Täydennetään siis vielä äskeiseen people/views.py -tiedostoon tieto, mistä kyseinen template löytyy:  
+
+    from django.views.generic import TemplateView, ListView
+    from .models import *
+
+    class ContactListView(ListView):
+        template_name = 'people/contacts.html'  <------
+        model = Contact
+  
+  
  
+Ja testataan:  
 
+![listaus](https://github.com/LiljestromNadja/Django_course/assets/118609353/67aa5ee7-7959-49c6-bc96-6635cbab3475)
+
+  
+---
+---
     
+#### Lähteet ja materiaalit:  
 
+[Tero Karvinen - Python Web - Idea to Production - 2023](https://terokarvinen.com/2023/python-web-idea-to-production/)
 
-
-
-
-
-
-
-   
-    
-
-    
-
-
-    
- 
-    
 
 ---
-### Tunnilla / päivä 2  
+---
+--- 
 
 #### Kertausta  
 
@@ -232,16 +313,3 @@ huom! luo appsin templateille kansio:
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
----
-    
-#### Lähteet ja materiaalit:  
-
-[Tero Karvinen - Python Web - Idea to Production - 2023](https://terokarvinen.com/2023/python-web-idea-to-production/)
