@@ -1,4 +1,4 @@
-# Muotillista
+<!-- # Muotillista
 ## Tehtävänanto
 
 x) Silmäile: Karvinen 2023: Tero's Classy Django Cheatsheet  
@@ -13,15 +13,20 @@ d) Vapaaehtoinen: Tee käyttöliittymä tietueiden poistamiseen - ja varmista, h
 
 Kuten aina, palauta Laksuun klo 23 mennessä ja arvioi kaksi.  
 
-
+-->
 ---
-<!--
-### tehtäväotsikko  
+
+### a) Tee Django-ohjelma, joka listaa kaikki tietueet etusivulla (ListView). Palauta lähdekoodi ja ruutukaappaus lopputuloksesta.
+(Jotain muuta kuin todo-lista, crm tai linnut. Ei tarvitse tehdä raporttia, lähdekoodi ja README.md:ssä kuvaus, mitä ohjelma tekee ja ruutukaappaus lopputuloksesta. Voit laittaa projektin omaksi kansiokseen esimerkiksi Github- tai Gitlab-varastoon.)  
 
 
 
-#### alaotsikko
- -->
+#### Uusi app  
+
+Luodaan app people:  
+
+    (env) nadja@debian:~/django/public_sites/kesadjango$ ./manage.py startapp people
+
  
  
 ---
