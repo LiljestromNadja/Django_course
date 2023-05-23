@@ -10,6 +10,7 @@ a) Tee Django-ohjelma, joka listaa kaikki tietueet etusivulla (ListView). Palaut
 b) Vapaaehtoinen: Tee käyttöliittymä uusien tietueiden lisäämiseen (CreateView)  
 c) Vapaaehtoinen: Tee käyttöliittymä tietueiden muokaamiseen (UpdateView)  
 d) Vapaaehtoinen: Tee käyttöliittymä tietueiden poistamiseen - ja varmista, haluatko todella poistaa (DeleteView)  
+
 Kuten aina, palauta Laksuun klo 23 mennessä ja arvioi kaksi.  
 
 
