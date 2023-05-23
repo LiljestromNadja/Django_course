@@ -304,6 +304,11 @@ huom! luo appsin templateille kansio:
  eli  
    
     nadja@debian:~/djangokansio/public_sites/projektin nimi/appsin nimi/templates/ appsin nimi$
+    
+    
+#### Git
+
+[Installing git to Debian 11](https://github.com/LiljestromNadja/DebianLinux/blob/main/GIT/installingGit.md)
 
 
     
