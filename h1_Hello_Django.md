@@ -1,5 +1,5 @@
-# Hello Django
-## Djangon asennus - Tehtävänanto  
+## h1 Hello Django
+### Djangon asennus - Tehtävänanto  
 
 h1 Hello Django  
 x) Lue (tiivistelmää ei tarvita, eli tästä lukutehtävästä ei palauteta mitään)  
