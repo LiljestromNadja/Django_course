@@ -527,7 +527,7 @@ Kun migraatio menee sekaisin, tätä voi kokeilla -> ei tuotannossa!
 [Tero Karvinen - Python Web - Idea to Production - 2023](https://terokarvinen.com/2023/python-web-idea-to-production/)  
 [Tero's Classy Django Cheatsheet](https://terokarvinen.com/2023/django-cheatsheet/)  
 
-**Hyödyllistä: **  
+**Hyödyllistä:**  
 
 [Django 4.2 Documentation Working with forms](https://docs.djangoproject.com/en/4.2/topics/forms/)  
 [Django 4.2 Documentation Model field reference](https://docs.djangoproject.com/en/4.2/ref/models/fields/#datetimefield)
