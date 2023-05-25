@@ -10,4 +10,8 @@ Python Django -course, Haaga-Helia University of Applied Sciences
 
 [h2_Muotillista->](https://github.com/LiljestromNadja/Django_course/blob/main/h2_Muotillista.md)
 
-[h3_Generally_CRUDdy->](https://github.com/LiljestromNadja/Django_course/blob/main/h3_Generally_CRUDdy.md)
+[h3_Generally_CRUDdy->](https://github.com/LiljestromNadja/Django_course/blob/main/h3_Generally_CRUDdy.md)  
+
+[h4_Suhteita->](https://github.com/LiljestromNadja/Django_course/blob/main/h4_Suhteita.md)  
+
+
