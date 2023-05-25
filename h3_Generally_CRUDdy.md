@@ -400,6 +400,29 @@ products/views.py:
 
 Luodaan templates/products/product_confirm_delete.html
 
+
+        {% extends "products/base.html" %}
+
+
+        {% block "content" %}
+            <a href="/">Back to list</a>
+            <form method="post">
+                {% csrf_token %} 
+                This cannot be undone. Are you sure to delete <b> {{object.name}}</b>? 
+                <p><a href="/product/{{ object.pk  }}/edit">Cancel<a>
+                <input type=submit value="Yes, I am sure">
+
+            </form>	
+        {% endblock "content" %}
+
+
+
+
+
+
+
+
+
     
 
 
