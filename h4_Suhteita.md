@@ -435,7 +435,7 @@ Projektin kesadjango/urls.py:
             <a href="/">Back to list</a>
             <form method="post">
                 {% csrf_token %} 
-                This cannot be undone. Are you sure to delete <b> {{object.name}}</b>? 
+                This cannot be undone. Are you sure to delete <b> {{object.subject}}</b>? 
                 <p><a href="/note/{{ object.pk  }}/edit">Cancel<a>
                 <input type=submit value="Yes, I am sure">
 
