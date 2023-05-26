@@ -124,7 +124,7 @@ Note: subject, message , person(FK)
 
 (env) nadja@debian:~/django/public_sites/kesadjango$ ./manage.py makemigrations ; ./manage.py migrate  
 
-**"Register your models here:"  
+**"Register your models here:"**   
 
         (env) nadja@debian:~/django/public_sites/kesadjango$ micro notes/admin.py  
         ->
