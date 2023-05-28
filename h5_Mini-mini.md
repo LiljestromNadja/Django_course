@@ -41,7 +41,13 @@ User:
 Laput: katselu, lisääminen, muokkaaminen poistaminen   
 Käyttäjätilit: -  
 
-Rekisteröitymätön käyttäjä: voi luoda user-tasoisen tilin  
+Rekisteröitymätön käyttäjä: voi luoda user-tasoisen tilin 
+
+
+![hl1](https://github.com/LiljestromNadja/Django_course/assets/118609353/8c6216c0-a2b2-4eae-b4e9-dd951537953b)
+
+
+
 
 **Sovellukseen lisättävää:**  
 
