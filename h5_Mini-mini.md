@@ -39,8 +39,8 @@ Käyttäjätilit: katselu, lisääminen, muokkaaminen, poistaminen
 
 User:   
 Laput: katselu, lisääminen, muokkaaminen poistaminen   
-
 Käyttäjätilit: -  
+
 Rekisteröitymätön käyttäjä: voi luoda user-tasoisen tilin  
 
 **Sovellukseen lisättävää:**  
@@ -69,8 +69,8 @@ Käyttäjätilit: katselu, lisääminen, muokkaaminen, poistaminen
 
 User:   
 Laput: katselu, lisääminen, muokkaaminen poistaminen   
-
 Käyttäjätilit: oman käyttäjätilin muokkaaminen: salasana     
+
 Rekisteröitymätön käyttäjä: voi luoda user-tasoisen tilin  
 
 
