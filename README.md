@@ -14,4 +14,6 @@ Python Django -course, Haaga-Helia University of Applied Sciences
 
 [h4_Suhteita->](https://github.com/LiljestromNadja/Django_course/blob/main/h4_Suhteita.md)  
 
+[h5_Mini-mini->](https://github.com/LiljestromNadja/Django_course/blob/main/h5_Mini-mini.md)  
+
 
