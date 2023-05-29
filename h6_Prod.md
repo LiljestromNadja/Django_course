@@ -38,7 +38,7 @@ Dropletia varten tarvitaan SSH-avain, joten luodaan sellainen omassa terminaalis
 
 
 
-Droplet luotu:  
+**Droplet luotu:**    
 
 ![droplet](https://github.com/LiljestromNadja/Django_course/assets/118609353/dd00b78c-cdb9-45a1-9700-9058526a2b03)
 
