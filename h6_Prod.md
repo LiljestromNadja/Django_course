@@ -447,7 +447,7 @@ Testataan:
         (env) nadjaeta@debian-s-1vcpu-1gb-fra1-01-summerdjango:~/publicwsgi/nlilj$ sudo systemctl restart apache2  
         
         
-Nyt etusivun pitäisi näyttää 404 - Not Found, koska sinne ei ole määritelty mitään:  
+Nyt etusivun pitäisi näyttää 404 - Not Found, koska sinne ei ole määritelty (vielä) mitään:  
 
         (env) nadjaeta@debian-s-1vcpu-1gb-fra1-01-summerdjango:~/publicwsgi$ curl -s 'localhost'|grep title
         --> <title>Not Found</title>
