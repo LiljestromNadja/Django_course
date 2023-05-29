@@ -491,7 +491,6 @@ Nyt etusivun pitäisi näyttää 404 - Not Found, koska sinne ei ole määritelt
 
 
 
-*** 
 ---
 ---  
 
@@ -500,7 +499,8 @@ Asensin Micron:
         nadjaeta@debian-s-1vcpu-1gb-fra1-01-summerdjango:~$ sudo apt-get install micro
         nadjaeta@debian-s-1vcpu-1gb-fra1-01-summerdjango:~$ export EDITOR=micro
 
-    
+
+***   
 #### Lähteet ja materiaalit:  
 
 [Tero Karvinen - Python Web - Idea to Production - 2023](https://terokarvinen.com/2023/python-web-idea-to-production/)  
