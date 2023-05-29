@@ -25,7 +25,7 @@ Näkyykö nimi jo palveluntarjoajan omilla palvelimilla? Namecheapilla 'host www
 
 Olen tehnyt tunnuksen ja vuokrannut pilvipalvelimen aikaisemmin Teron [Linux-palvelimet](https://github.com/LiljestromNadja/DebianLinux/blob/main/h7_Based-Real_Internet.md#a-vuokraa-oma-virtuaalipalvelin-haluamaltasi-palveluntarjoajalta-vaihtoehtona-voit-k%C3%A4ytt%C3%A4%C3%A4-ilmaista-kokeilujaksoa-github-education-krediittej%C3%A4-tai-jos-mik%C3%A4%C3%A4n-muu-ei-onnistu-voit-kokeilla-vagrantia-paikallisesti) -kurssilla. Käytän siis tässäkin projektissa [DigitalOceanin](https://www.digitalocean.com/) dropletia. 
 
-Omassa terminaalissa:  
+Dropletia varten tarvitaan SSH-avain, joten luodaan sellainen omassa terminaalissa:  
 
         nadja@debian:~$ ssh-keygen
         
