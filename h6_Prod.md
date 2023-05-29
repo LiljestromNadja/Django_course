@@ -453,6 +453,15 @@ Nyt etusivun pitäisi näyttää 404 - Not Found, koska sinne ei ole määritelt
         --> <title>Not Found</title>
 
 
+#### Migraatiot tietokantaan:  
+
+        (env) nadjaeta@debian-s-1vcpu-1gb-fra1-01-summerdjango:~/publicwsgi/nlilj$ ./manage.py runserver
+        
+        (env) nadjaeta@debian-s-1vcpu-1gb-fra1-01-summerdjango:~/publicwsgi/nlilj$ ./manage.py makemigrations ; ./manage.py migrate
+        
+        (env) nadjaeta@debian-s-1vcpu-1gb-fra1-01-summerdjango:~/publicwsgi/nlilj$ ./manage.py createsuperuser
+
+
 
 
 
@@ -498,6 +507,7 @@ Asensin Micron:
 
         nadjaeta@debian-s-1vcpu-1gb-fra1-01-summerdjango:~$ sudo apt-get install micro
         nadjaeta@debian-s-1vcpu-1gb-fra1-01-summerdjango:~$ export EDITOR=micro
+        
 
 
 ***   
