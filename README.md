@@ -18,4 +18,6 @@ Python Django -course, Haaga-Helia University of Applied Sciences
 
 [h6_Prod->](https://github.com/LiljestromNadja/Django_course/blob/main/h6_Prod.md)  
 
+[h7_Valmis_miniprojekti->](https://github.com/LiljestromNadja/Django_course/blob/main/h7_Valmis_miniprojekti.md)
+
 
