@@ -22,7 +22,7 @@ Linkki lähdekoodiin (Github/Gitlab näyttää tämän ihan automaattisestikin)
 ### a) Miniprojekti 
 
 
-### [Projektin koodit >>>](https://github.com/LiljestromNadja/djangoSummer)  
+#### [Projektin koodit >>>](https://github.com/LiljestromNadja/djangoSummer)  
 #### [nadjaliljestrom.website >>>](www.nadjaliljestrom.website)  
 
 **Sovelluksen tarkoitus:**   
