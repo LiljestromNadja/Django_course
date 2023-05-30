@@ -461,6 +461,47 @@ Nyt etusivun pitäisi näyttää 404 - Not Found, koska sinne ei ole määritelt
         
         (env) nadjaeta@debian-s-1vcpu-1gb-fra1-01-summerdjango:~/publicwsgi/nlilj$ ./manage.py createsuperuser
 
+#### Portti 80: 
+
+        $ sudo ufw allow 80/tcp
+        
+Muokataan tiedostoa settings.py:  
+
+        nadjaeta@debian-s-1vcpu-1gb-fra1-01-summerdjango:~/publicwsgi/nlilj$ micro nlilj/settings.py 
+        
+        ->
+        ALLOWED_HOSTS = ["localhost", "nadjaliljestrom.website"]
+
+        
+        nadjaeta@debian-s-1vcpu-1gb-fra1-01-summerdjango:~/publicwsgi/nlilj$ touch nlilj/wsgi.py 
+        
+
+Testataillaan selaimessa http: //64.227.117.15/static/ , nadjaliljestrom.website/static/, nadjaliljestrom.website/admin/ 
+
+
+
+#### Static files:  
+
+        nadjaeta@debian-s-1vcpu-1gb-fra1-01-summerdjango:~/publicwsgi/nlilj$ micro nlilj/settings.py 
+        
+        ->
+        
+        import os
+        
+        STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+        
+        
+        
+        
+        nadjaeta@debian-s-1vcpu-1gb-fra1-01-summerdjango:~/publicwsgi/nlilj$ ./manage.py collectstatic
+        -> yes
+        
+
+        nadjaeta@debian-s-1vcpu-1gb-fra1-01-summerdjango:~/publicwsgi/nlilj$ touch nlilj/wsgi.py 
+
+
+       
+
 
 
 
@@ -483,8 +524,10 @@ Nyt etusivun pitäisi näyttää 404 - Not Found, koska sinne ei ole määritelt
 
 
 
+---
+### c) Vapaaehtoinen: vuokraa nimi ja laita se osoittamaan omaan palvelimeesi.  
 
-
+Vuokrasin [domainin](http://www.nadjaliljestrom.website/) [Linux-palvelimet](https://github.com/LiljestromNadja/DebianLinux/blob/main/h8_Say_my_name.md#a-vuokraa-domainnimi-ja-aseta-se-osoittamaan-virtuaalipalvelimeesi) -kurssilla. Yhdistin vuokraamani pilvipalvelimen ip-osoitteen vuokraamaani domainiin. 
 
 
     
