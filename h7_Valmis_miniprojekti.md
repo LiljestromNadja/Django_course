@@ -23,7 +23,7 @@ Linkki lähdekoodiin (Github/Gitlab näyttää tämän ihan automaattisestikin)
 
 
 #### [Projektin koodit >>>](https://github.com/LiljestromNadja/djangoSummer)  
-#### [nadjaliljestrom.website >>>](www.nadjaliljestrom.website)  
+#### [nadjaliljestrom.website >>>](http://www.nadjaliljestrom.website)  
 
 **Sovelluksen tarkoitus:**   
 Digitaaliset heippalaput taloyhtiön sisäisen kommunikoinnin ja tiedottamisen edistämiseen.  
